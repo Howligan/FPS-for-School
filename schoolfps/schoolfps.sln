@@ -1,7 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "schoolfps.Plugins", "schoolfps.Plugins.csproj", "{0A219FC3-3F62-5DD7-6E7B-C342DF0DC048}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "schoolfps", "schoolfps.csproj", "{7BFD5AE8-5B0A-A848-ED04-680C88BB2B07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "schoolfps.Editor.Plugins", "schoolfps.Editor.Plugins.csproj", "{615B2B30-245A-37EF-1088-7BE524A84B20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +13,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A219FC3-3F62-5DD7-6E7B-C342DF0DC048}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A219FC3-3F62-5DD7-6E7B-C342DF0DC048}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A219FC3-3F62-5DD7-6E7B-C342DF0DC048}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A219FC3-3F62-5DD7-6E7B-C342DF0DC048}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7BFD5AE8-5B0A-A848-ED04-680C88BB2B07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7BFD5AE8-5B0A-A848-ED04-680C88BB2B07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BFD5AE8-5B0A-A848-ED04-680C88BB2B07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BFD5AE8-5B0A-A848-ED04-680C88BB2B07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{615B2B30-245A-37EF-1088-7BE524A84B20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{615B2B30-245A-37EF-1088-7BE524A84B20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{615B2B30-245A-37EF-1088-7BE524A84B20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{615B2B30-245A-37EF-1088-7BE524A84B20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
