@@ -58,10 +58,10 @@ public class GunAK47 : MonoBehaviour {
         {
             Debug.Log(akHitInfo.transform.name);
 
-            EnemyAI enemy = akHitInfo.transform.GetComponent<EnemyAI>();
+            SoldierAI enemy = akHitInfo.transform.GetComponent<SoldierAI>();
             if (enemy != null)
             {
-                enemy.TakeDamage(akDamage);
+                enemy.health = 0;
             }
 
             if(akHitInfo.rigidbody != null)
