@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class SoldierAI : MonoBehaviour {
+public class FightingDummies : MonoBehaviour
+{
 
     [SerializeField]
     private GameObject target;
@@ -50,21 +51,23 @@ public class SoldierAI : MonoBehaviour {
             ShootTarget();
             GunReload();
         }
-        
+
     }
 
     void FindTarget()
     {
-        Collider[] hits = Physics.OverlapSphere(this.transform.position, visionRadius,((1<<8) | (1<<9)));
+        Collider[] hits = Physics.OverlapSphere(this.transform.position, visionRadius, ((1 << 8)|(1 << 10)));
 
         foreach (Collider hitCol in hits)
         {
             if (hitCol.gameObject.layer != this.gameObject.layer)
             {
-                if (hitCol.gameObject.GetComponent<SoldierAI>().isDead == false)
+                if (hitCol.gameObject.GetComponent<testdummy>())
                 {
                     target = hitCol.gameObject;
                     hasTarget = true;
+
+                    Debug.Log(target);
                 }
             }
         }
@@ -100,7 +103,7 @@ public class SoldierAI : MonoBehaviour {
 
         if (Physics.Raycast(transform.position, shootDir, out hit))
         {
-            if (hit.collider.GetComponent<SoldierAI>() && hit.collider.GetComponent<SoldierAI>().isDead == false)
+            if (hit.collider.GetComponent<testdummy>())
             {
                 if (isReloading == false && boltIsCycling == false && currentAmmo > 0)
                 {
@@ -109,7 +112,7 @@ public class SoldierAI : MonoBehaviour {
 
                     UKBoltCycle();
 
-                    int hitChance = Random.Range(0,100);
+                    int hitChance = Random.Range(0, 100);
 
                     if (hitChance >= 50)
                     {
@@ -119,9 +122,9 @@ public class SoldierAI : MonoBehaviour {
                         if (rbComp)
                             rbComp.AddForceAtPosition(impactForce * bulletForce, hit.point, ForceMode.Impulse);
 
-                        target.GetComponent<SoldierAI>().isDead = true;
+                        
                     }
-                    
+
                 }
             }
         }

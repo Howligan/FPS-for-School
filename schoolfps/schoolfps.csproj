@@ -90,11 +90,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\FightingDummies.cs" />
     <Compile Include="Assets\Scripts\GunAK47.cs" />
+    <Compile Include="Assets\Scripts\NavmeshTest.cs" />
     <Compile Include="Assets\Scripts\PlayerLook.cs" />
     <Compile Include="Assets\Scripts\PlayerMove.cs" />
     <Compile Include="Assets\Scripts\RifleScript.cs" />
     <Compile Include="Assets\Scripts\SoldierAI.cs" />
+    <Compile Include="Assets\Scripts\SoldierAIRevamp.cs" />
+    <Compile Include="Assets\Scripts\testdummy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
