@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class SoldierAIRevamp : MonoBehaviour {
 
@@ -8,7 +9,7 @@ public class SoldierAIRevamp : MonoBehaviour {
     public float visionRadius;
     public bool hasTarget { get; set; }
     public bool isDead = false;
-    public int howMuchTurn = 100;
+    public float rotationSpeed;
     public float bulletForce;
     public int TeamID;
     public bool isReloading = false;
@@ -22,6 +23,7 @@ public class SoldierAIRevamp : MonoBehaviour {
         AssignTeamID();
         AssignAmmo();
         currentAmmo = maxAmmo;
+        Debug.Log("Initial Rotation" + transform.rotation.y);
     }
 
     private void Update()
@@ -35,6 +37,7 @@ public class SoldierAIRevamp : MonoBehaviour {
         {
            StartCoroutine(Reloading());
         }
+        AimAtTarget();
     }
 
     void FindTarget()
@@ -60,11 +63,14 @@ public class SoldierAIRevamp : MonoBehaviour {
     {
         if (!hasTarget)
             return;
-        Vector3 lookDir = target.gameObject.transform.position - transform.position;
+        Vector3 lookDir = (target.gameObject.transform.position - transform.position).normalized;
         lookDir.y = 0;
+        lookDir.Normalize();
         Quaternion rotation = Quaternion.LookRotation(lookDir);
-        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * howMuchTurn);
+        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * rotationSpeed);
         ShootTarget();
+
+        Debug.Log("calculated rotation:" + transform.rotation.y);
 
         Debug.Log("I am looking at the target");
     }
