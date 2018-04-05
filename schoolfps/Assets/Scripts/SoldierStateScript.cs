@@ -1,13 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class SoldierStateScript : MonoBehaviour {
 
-    public enum SoldierAIState { Searching, Aiming, Shooting, Reloading, Dead }
+    public enum SoldierAIState { Searching, Engaging, Aiming, Shooting, Reloading, Dead }
 
     public SoldierAIState currentSoldierState;
 
+    [SerializeField]
     GameObject currentTarget;
     public int visionRadius;
     public int aimSpeed;
@@ -19,9 +21,13 @@ public class SoldierStateScript : MonoBehaviour {
     public float timeToReload;
     public float reloadTime;
 
-    // Use this for initialization
+    public Vector3 destination;
+    NavMeshAgent nmagent;
+
     void Start()
     {
+        nmagent = this.GetComponent<NavMeshAgent>();
+
         if (this.gameObject.layer == 8)
         {
             maxAmmo = 8;
@@ -37,13 +43,15 @@ public class SoldierStateScript : MonoBehaviour {
         currentAmmo = maxAmmo;
     }
 
-    // Update is called once per frame
     void Update()
     {
         switch (currentSoldierState)
         {
             case SoldierAIState.Searching:
                 Searching();
+                break;
+            case SoldierAIState.Engaging:
+                Engaging();
                 break;
             case SoldierAIState.Aiming:
                 Aiming();
@@ -58,6 +66,8 @@ public class SoldierStateScript : MonoBehaviour {
                 Dead();
                 break;
         }
+
+        destination = nmagent.destination;
     }
 
     void Searching()
@@ -76,13 +86,34 @@ public class SoldierStateScript : MonoBehaviour {
 
         if (currentTarget != null)
         {
-            currentSoldierState = SoldierAIState.Aiming;
+            currentSoldierState = SoldierAIState.Engaging;
         }
+
+        
     }
 
     void Engaging()
     {
+        if (currentTarget != null)
+        {
+            nmagent.stoppingDistance = 40;
+        }
 
+        nmagent.SetDestination(currentTarget.transform.position);
+
+        if (nmagent.velocity.magnitude == 0 && nmagent.remainingDistance < 40f && nmagent.hasPath == true)
+        {
+            currentSoldierState = SoldierAIState.Aiming;
+        }
+
+        Debug.Log(nmagent.remainingDistance);
+        Debug.Log(nmagent.velocity);
+
+        if (currentTarget.GetComponent<SoldierStateScript>().currentSoldierState == SoldierAIState.Dead)
+        {
+            currentTarget = null;
+            currentSoldierState = SoldierAIState.Searching;
+        }
     }
 
     void Aiming()
@@ -141,6 +172,15 @@ public class SoldierStateScript : MonoBehaviour {
         //enable ragdoll
     }
 
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, visionRadius);
+        Vector3 lookDir = currentTarget.gameObject.transform.position - transform.position;
+        Gizmos.color = Color.red;
+        Gizmos.DrawRay(transform.position, lookDir);
+    }
+
     IEnumerator CyclingTheBolt()
     {
         if (isReloading == false)
@@ -160,3 +200,9 @@ public class SoldierStateScript : MonoBehaviour {
         isReloading = false;
     }
 }
+/* 
+ want destination to be the target transform but (x) units away
+ can make state called engaging
+ when npc finds target: set destination to that target
+ only fire when in range of the target
+     */
