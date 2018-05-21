@@ -1,0 +1,271 @@
+fileFormatVersion: 2
+guid: 299ed183ec700964689a7aecc3619c36
+timeCreated: 1526703480
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: base_obj
+    100002: Bolt
+    100004: Bolt_Bone
+    100006: Bolt_Head
+    100008: Bolt_Head_Bone
+    100010: Chest
+    100012: Foot_L
+    100014: Foot_R
+    100016: //RootNode
+    100018: French_Soldier_Armature
+    100020: Hand_L
+    100022: Hand_R
+    100024: Head
+    100026: high-poly_obj
+    100028: Hips
+    100030: Index1_L
+    100032: Index1_R
+    100034: Index2_L
+    100036: Index2_R
+    100038: Index3_L
+    100040: Index3_R
+    100042: Lebel_Armature
+    100044: LowerArm_L
+    100046: LowerArm_R
+    100048: LowerLeg_L
+    100050: LowerLeg_R
+    100052: Middle1_L
+    100054: Middle1_R
+    100056: Middle2_L
+    100058: Middle2_R
+    100060: Middle3_L
+    100062: Middle3_R
+    100064: Neck
+    100066: Pinky1_L
+    100068: Pinky1_R
+    100070: Pinky2_L
+    100072: Pinky2_R
+    100074: Pinky3_L
+    100076: Pinky3_R
+    100078: PoleTarget_L
+    100080: PoleTarget_R_001
+    100082: Rifle
+    100084: Ring1_L
+    100086: Ring1_R
+    100088: Ring2_L
+    100090: Ring2_R
+    100092: Ring3_L
+    100094: Ring3_R
+    100096: Root_Rifle_Bone
+    100098: Shoulder_L
+    100100: Shoulder_R
+    100102: Spine
+    100104: Thumb1_L
+    100106: Thumb1_R
+    100108: Thumb2_L
+    100110: Thumb2_R
+    100112: Thumb3_L
+    100114: Thumb3_R
+    100116: Toes_L
+    100118: Toes_R
+    100120: Trigger
+    100122: Trigger_Bone
+    100124: UpperArm_L
+    100126: UpperArm_R
+    100128: UpperLeg_L
+    100130: UpperLeg_R
+    400000: base_obj
+    400002: Bolt
+    400004: Bolt_Bone
+    400006: Bolt_Head
+    400008: Bolt_Head_Bone
+    400010: Chest
+    400012: Foot_L
+    400014: Foot_R
+    400016: //RootNode
+    400018: French_Soldier_Armature
+    400020: Hand_L
+    400022: Hand_R
+    400024: Head
+    400026: high-poly_obj
+    400028: Hips
+    400030: Index1_L
+    400032: Index1_R
+    400034: Index2_L
+    400036: Index2_R
+    400038: Index3_L
+    400040: Index3_R
+    400042: Lebel_Armature
+    400044: LowerArm_L
+    400046: LowerArm_R
+    400048: LowerLeg_L
+    400050: LowerLeg_R
+    400052: Middle1_L
+    400054: Middle1_R
+    400056: Middle2_L
+    400058: Middle2_R
+    400060: Middle3_L
+    400062: Middle3_R
+    400064: Neck
+    400066: Pinky1_L
+    400068: Pinky1_R
+    400070: Pinky2_L
+    400072: Pinky2_R
+    400074: Pinky3_L
+    400076: Pinky3_R
+    400078: PoleTarget_L
+    400080: PoleTarget_R_001
+    400082: Rifle
+    400084: Ring1_L
+    400086: Ring1_R
+    400088: Ring2_L
+    400090: Ring2_R
+    400092: Ring3_L
+    400094: Ring3_R
+    400096: Root_Rifle_Bone
+    400098: Shoulder_L
+    400100: Shoulder_R
+    400102: Spine
+    400104: Thumb1_L
+    400106: Thumb1_R
+    400108: Thumb2_L
+    400110: Thumb2_R
+    400112: Thumb3_L
+    400114: Thumb3_R
+    400116: Toes_L
+    400118: Toes_R
+    400120: Trigger
+    400122: Trigger_Bone
+    400124: UpperArm_L
+    400126: UpperArm_R
+    400128: UpperLeg_L
+    400130: UpperLeg_R
+    4300000: base_obj
+    4300002: high-poly_obj
+    4300004: Bolt
+    4300006: Bolt_Head
+    4300008: Rifle
+    4300010: Trigger
+    7400000: Default Take
+    7400002: French_Bolt_Cycle
+    7400004: French_Idle
+    7400006: French_P_Aiming
+    7400008: French_Reload
+    7400010: French_Run
+    7400012: French_Walk
+    7400014: Lebel_Bolt_Cycle
+    7400016: Lebel_Idle
+    7400018: Lebel_P_Aiming
+    7400020: Lebel_Reload
+    7400022: Lebel_Run
+    7400024: Lebel_Walk
+    9500000: //RootNode
+    13700000: base_obj
+    13700002: Bolt
+    13700004: Bolt_Head
+    13700006: high-poly_obj
+    13700008: Rifle
+    13700010: Trigger
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Default Take' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'Ring1_R' has translation animation that
+      will be discarded.\n\t'Pinky1_R' has translation animation that will be discarded.\n\t'Index1_R'
+      has translation animation that will be discarded.\n\nClip 'French_Bolt_Cycle'
+      has import animation warnings that might lower retargeting quality:\nNote: Activate
+      translation DOF on avatar to improve retargeting quality.\n\t'Ring1_R' has translation
+      animation that will be discarded.\n\t'Pinky1_R' has translation animation that
+      will be discarded.\n\nClip 'French_Reload' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
+      improve retargeting quality.\n\t'Ring1_R' has translation animation that will
+      be discarded.\n\t'Pinky1_R' has translation animation that will be discarded.\n\t'Index1_R'
+      has translation animation that will be discarded.\n\nClip 'Lebel_Bolt_Cycle'
+      has import animation warnings that might lower retargeting quality:\nNote: Activate
+      translation DOF on avatar to improve retargeting quality.\n\t'Ring1_R' has translation
+      animation that will be discarded.\n\t'Pinky1_R' has translation animation that
+      will be discarded.\n\t'Index1_R' has translation animation that will be discarded.\n\nClip
+      'Lebel_Idle' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Ring1_R'
+      has translation animation that will be discarded.\n\t'Pinky1_R' has translation
+      animation that will be discarded.\n\t'Index1_R' has translation animation that
+      will be discarded.\n\nClip 'Lebel_P_Aiming' has import animation warnings that
+      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
+      improve retargeting quality.\n\t'Ring1_R' has translation animation that will
+      be discarded.\n\t'Pinky1_R' has translation animation that will be discarded.\n\nClip
+      'Lebel_Reload' has import animation warnings that might lower retargeting quality:\nNote:
+      Activate translation DOF on avatar to improve retargeting quality.\n\t'Ring1_R'
+      has translation animation that will be discarded.\n\t'Pinky1_R' has translation
+      animation that will be discarded.\n\t'Index1_R' has translation animation that
+      will be discarded.\n\nClip 'Lebel_Run' has import animation warnings that might
+      lower retargeting quality:\nNote: Activate translation DOF on avatar to improve
+      retargeting quality.\n\t'Ring1_R' has translation animation that will be discarded.\n\t'Pinky1_R'
+      has translation animation that will be discarded.\n\nClip 'Lebel_Walk' has import
+      animation warnings that might lower retargeting quality:\nNote: Activate translation
+      DOF on avatar to improve retargeting quality.\n\t'Ring1_R' has translation animation
+      that will be discarded.\n\t'Pinky1_R' has translation animation that will be
+      discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

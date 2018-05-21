@@ -90,6 +90,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AnimTestScript.cs" />
     <Compile Include="Assets\Scripts\GunAK47.cs" />
     <Compile Include="Assets\Scripts\PlayerLook.cs" />
     <Compile Include="Assets\Scripts\PlayerMove.cs" />
